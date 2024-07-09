@@ -40,8 +40,6 @@ function App() {
       <MoveToTop/>
 
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route exact path="/" element={<Home/>} />
         <Route path="/akila_portfolio" element={<Home/>} />
         <Route path="/Aboutme" element={<AboutMe/>}/>
         <Route path="/myR" element={<MyResume/>}/>

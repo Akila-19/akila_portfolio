@@ -29,6 +29,7 @@ const Nav = () => {
     var hideMenu = () => {
         
         var ham = document.getElementsByClassName("NavbarLinks");
+        ham[0].classList.remove("showNavbar");
     }
 
     window.addEventListener("scroll", scrollHandler);
@@ -46,7 +47,7 @@ const Nav = () => {
 
             <ul className='NavbarLinks'>
                 <li onClick={hideMenu}>
-                    <NavLink to="/" style={({ isActive }) => ({
+                    <NavLink to="/akila_portfolio" style={({ isActive }) => ({
                     color: isActive ? '#64ffda' : '#545e6f',
                 })}><AiOutlineHome className='text-3xl pr-1'/> Home</NavLink>
                 </li>
