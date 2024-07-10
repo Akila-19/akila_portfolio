@@ -48,29 +48,29 @@ const Nav = () => {
             <ul className='NavbarLinks'>
                 <li onClick={hideMenu}>
                     <NavLink to="/akila_portfolio" style={({ isActive }) => ({
-                    color: isActive ? '#64ffda' : '#545e6f',
+                    color: isActive ? '#64ffda' : '#ffffff',
                 })}><AiOutlineHome className='text-3xl pr-1'/> Home</NavLink>
                 </li>
 
                 <li onClick={hideMenu}>
                     <NavLink to="/Aboutme" style={({ isActive }) => ({
-                    color: isActive ? '#64ffda' : '#545e6f',
+                    color: isActive ? '#64ffda' : '#ffffff',
                 })}><BsPerson className='text-3xl pr-1'/> About</NavLink>
                 </li>
                 <li onClick={hideMenu}>
                     <NavLink to="/Skills" style={({ isActive }) => ({
-                    color: isActive ? '#64ffda' : '#545e6f',
+                    color: isActive ? '#64ffda' : '#ffffff',
                 })}><FaCode className='text-3xl pr-1'/> Skills</NavLink>
                 </li>
                 <li onClick={hideMenu}>
                     <NavLink to="/Experience" style={({ isActive }) => ({
-                    color: isActive ? '#64ffda' : '#545e6f',
+                    color: isActive ? '#64ffda' : '#ffffff',
                 })}><CgFileDocument className='text-3xl pr-1' /> Projects </NavLink>
                 </li>
 
                 <li onClick={hideMenu}>
                     <NavLink to="/Contact" style={({ isActive }) => ({
-                    color: isActive ? '#64ffda' : '#545e6f',
+                    color: isActive ? '#64ffda' : '#ffffff',
                 })}><FaRegEnvelope  className='text-3xl pr-1'/> Contact </NavLink>
                 </li>
 

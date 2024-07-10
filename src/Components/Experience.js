@@ -47,7 +47,7 @@ function Experience() {
                 CC1,CC2,CC3,CC4,CC5,CC6,CC7,CC8,CC9,CC10
             ],
             title: " Cloud Computing, Full Stack Development, DevOps, Security & Compliance, Agile Leadership, Software Development",
-            technologies: ["EC2", "S3", "RDS", "VPC", "IAM", "CloudFront", "SNS", "SQS", "LightSail", "EBS", "Lambda", "Angular", "React", "Node.js", "Express.js", "CI/CD", "Docker", "Kubernetes"],
+            technologies: ["EC2", "S3", "RDS", "VPC", "IAM", "CloudFront", "SNS", "SQS", "LightSail", "DynamoDB ", "EBS", "Lambda", "Angular", "React", "Node.js", "Express.js","Terraform", "CI/CD", "Docker", "Kubernetes", "Jenkins"],
             description: "Expertise in architecting and deploying comprehensive AWS solutions, proficient in both frontend and backend development. Skilled in designing and implementing CI/CD pipelines and Docker containerization. Strong focus on security best practices and compliance standards, and proven ability to lead cross-functional teams using agile methodologies. Extensive experience in managing the end-to-end software development lifecycle.",
             responsibilities: `
             - Architecting and deploying AWS solutions, ensuring scalability, reliability, and security.
@@ -73,7 +73,7 @@ function Experience() {
             ],
             gitLink: `https://github.com/CLCM3102-Ice-Cream-Shop/frontend-ice-cream.git`,
             title: "Comprehensive Website Development & AWS Deployment of Ice cream digital checkout system",
-            technologies: ["Angular", "Bootstrap", "Python", "AWS EC2", "RDS", "S3", "SNS", "CI/CD", "Docker", "Security Compliance"],
+            technologies: ["Angular", "Bootstrap", "MySQL", "Python", "AWS EC2", "RDS", "S3", "SNS", "CI/CD", "Docker Compose", "Security Compliance"],
             description: "Led the development of an interactive website for a specialty ice cream shop, utilizing Angular, Bootstrap, and Python. Orchestrated deployment on AWS EC2, RDS, S3, and SNS, resulting in fault tolerance and scalability improvements. Established resilient CI/CD pipelines and Docker configurations, optimizing development workflows and efficiency.",
             responsibilities: `
             - Led development of interactive website for specialty ice cream shop, resulting in increased online revenue and customer retention.
@@ -115,7 +115,7 @@ function Experience() {
                 VTR
             ],
             title: "WordPress to Mobile App Conversion & AWS Migration",
-            technologies: ["AWS LightSail", "WordPress", "Mobile App Development", "Cloud Migration"],
+            technologies: ["AWS Services", "WordPress", "Mobile App Development", "AppMySite", "Cloud Migration"],
             description: "Led the migration of a WordPress website to a mobile app, leveraging AWS LightSail for cloud hosting. Collaborated with stakeholders to define requirements and deliver a user-centric solution. Executed AWS LightSail cloud migration, optimizing infrastructure for scalability and seamless integration with WordPress CMS.",
             responsibilities: `
             - Spearheaded end-to-end mobile app development initiative, achieving 25% increase in app downloads and 30% boost in user engagement metrics.
