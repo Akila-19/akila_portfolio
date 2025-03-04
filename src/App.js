@@ -11,7 +11,7 @@ import MoveToTop from "./Components/MoveToTop";
 import RingLoader from "react-spinners/RingLoader";
 import Experience from "./Components/Experience";
 import MyResume from "./Components/MyResume";
-
+import Certifications from "./Components/Certifications";
 
 
 
@@ -47,6 +47,7 @@ function App() {
         <Route path="/Skills" element={<Skills/>}/>
         <Route path="/Contact" element={<Contact/>}/>
         <Route path="/Experience" element={<Experience/>}/>
+        <Route path= "/Certification" element={< Certifications/>}/>
       </Routes>
       
       <Footer/>

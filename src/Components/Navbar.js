@@ -69,6 +69,12 @@ const Nav = () => {
                 </li>
 
                 <li onClick={hideMenu}>
+                    <NavLink to="/Certification" style={({ isActive }) => ({
+                    color: isActive ? '#64ffda' : '#ffffff',
+                })}><FaRegEnvelope  className='text-3xl pr-1'/> Certifications </NavLink>
+                </li>
+
+                <li onClick={hideMenu}>
                     <NavLink to="/Contact" style={({ isActive }) => ({
                     color: isActive ? '#64ffda' : '#ffffff',
                 })}><FaRegEnvelope  className='text-3xl pr-1'/> Contact </NavLink>
