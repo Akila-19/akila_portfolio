@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/akila_portfolio/static/css/main.be1ce120.css",
-    "main.js": "/akila_portfolio/static/js/main.d0529255.js",
+    "main.css": "/akila_portfolio/static/css/main.7cdc749a.css",
+    "main.js": "/akila_portfolio/static/js/main.495ddec0.js",
     "static/media/CC1.png": "/akila_portfolio/static/media/CC1.20792490667450ae79b3.png",
     "static/media/CLH1.png": "/akila_portfolio/static/media/CLH1.5bf2027bdb5f03f031bf.png",
     "static/media/CC3.png": "/akila_portfolio/static/media/CC3.afa643b538587765753c.png",
@@ -23,10 +23,10 @@
     "static/media/CLH8.png": "/akila_portfolio/static/media/CLH8.3b8c4f53943272f00bb5.png",
     "static/media/CC10.png": "/akila_portfolio/static/media/CC10.7193e89c481b7e625884.png",
     "static/media/CC5.png": "/akila_portfolio/static/media/CC5.689fdaf390052332c77b.png",
+    "static/media/Akilandeshwari_Srinivasan.pdf": "/akila_portfolio/static/media/Akilandeshwari_Srinivasan.36a8b100ade172599553.pdf",
     "static/media/DEV.jpg": "/akila_portfolio/static/media/DEV.11c3326b5eb8492dde55.jpg",
     "static/media/CLH6.png": "/akila_portfolio/static/media/CLH6.392e20dde7aeb1653c2b.png",
     "static/media/VTR.jpg": "/akila_portfolio/static/media/VTR.4d72e7bb2fa34a647869.jpg",
-    "static/media/Akilandeshwari_Srinivasan.pdf": "/akila_portfolio/static/media/Akilandeshwari_Srinivasan.ee4b202d25ac3cf95bbc.pdf",
     "static/media/CLH5.png": "/akila_portfolio/static/media/CLH5.76341335bae53451c60e.png",
     "static/media/CLH4.png": "/akila_portfolio/static/media/CLH4.c6069fae68631cfc4135.png",
     "static/media/ICS7.png": "/akila_portfolio/static/media/ICS7.7bfb94ed3aecf26c3468.png",
@@ -38,11 +38,11 @@
     "static/media/school.svg": "/akila_portfolio/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
     "static/media/work.svg": "/akila_portfolio/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "index.html": "/akila_portfolio/index.html",
-    "main.be1ce120.css.map": "/akila_portfolio/static/css/main.be1ce120.css.map",
-    "main.d0529255.js.map": "/akila_portfolio/static/js/main.d0529255.js.map"
+    "main.7cdc749a.css.map": "/akila_portfolio/static/css/main.7cdc749a.css.map",
+    "main.495ddec0.js.map": "/akila_portfolio/static/js/main.495ddec0.js.map"
   },
   "entrypoints": [
-    "static/css/main.be1ce120.css",
-    "static/js/main.d0529255.js"
+    "static/css/main.7cdc749a.css",
+    "static/js/main.495ddec0.js"
   ]
 }
