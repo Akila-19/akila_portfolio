@@ -15,6 +15,7 @@ function Certifications() {
         "Advanced certification for building modern React applications with hooks and context API.",
       skills: ["React", "JavaScript", "State Management"],
       pdfUrl: "https://github.com/Akila-19/akila_portfolio/blob/main/src/Components/Terraform.pdf",
+     pdfUrl: process.env.PUBLIC_URL + '/Terraform.pdf',
       icon: "📜",
     },
     // {
