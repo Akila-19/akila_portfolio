@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/akila_portfolio/static/css/main.87b1011f.css",
-    "main.js": "/akila_portfolio/static/js/main.fb024c1b.js",
+    "main.css": "/akila_portfolio/static/css/main.70a158f6.css",
+    "main.js": "/akila_portfolio/static/js/main.7fa278a9.js",
     "static/media/CC1.png": "/akila_portfolio/static/media/CC1.20792490667450ae79b3.png",
     "static/media/CLH1.png": "/akila_portfolio/static/media/CLH1.5bf2027bdb5f03f031bf.png",
     "static/media/CC3.png": "/akila_portfolio/static/media/CC3.afa643b538587765753c.png",
@@ -38,11 +38,11 @@
     "static/media/school.svg": "/akila_portfolio/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
     "static/media/work.svg": "/akila_portfolio/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "index.html": "/akila_portfolio/index.html",
-    "main.87b1011f.css.map": "/akila_portfolio/static/css/main.87b1011f.css.map",
-    "main.fb024c1b.js.map": "/akila_portfolio/static/js/main.fb024c1b.js.map"
+    "main.70a158f6.css.map": "/akila_portfolio/static/css/main.70a158f6.css.map",
+    "main.7fa278a9.js.map": "/akila_portfolio/static/js/main.7fa278a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.87b1011f.css",
-    "static/js/main.fb024c1b.js"
+    "static/css/main.70a158f6.css",
+    "static/js/main.7fa278a9.js"
   ]
 }
