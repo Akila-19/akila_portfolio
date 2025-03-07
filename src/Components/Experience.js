@@ -38,7 +38,9 @@ import VTR from '../assets/VTR.jpg'
 
 
 function Experience() {
-    const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState(null);
+  const [selectedImages, setSelectedImages] = useState([]);
+  const [showImageModal, setShowImageModal] = useState(false);
     const items = [
         {
             id: 1,
@@ -224,125 +226,116 @@ function Experience() {
           `
         }
     ];
+  
 
-    return (
-        <div className="container flex items-center justify-center p-4">
-            <div className="flex flex-wrap justify-center gap-y-16 gap-x-12">
-                {items.map((item) => (
-                    <div key={item.id} className="relative">
-                 
-                        <div className="projectCard block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-                       >
-                        <Carousel   showArrows={true} 
-    showThumbs={false} 
-    autoPlay 
-    interval={3000} 
-    infiniteLoop >
+  const handleImageClick = (images) => {
+    setSelectedImages(images); // Set clicked images array
+    setShowImageModal(true);  // Show the modal
+};
+
+const closeImageModal = () => {
+    setShowImageModal(false);  // Close the modal
+    setSelectedImages([]); // Clear the images
+};
+
+return (
+    <div className="container flex items-center justify-center p-4">
+        <div className="flex flex-wrap justify-center gap-y-16 gap-x-12">
+            {items.map((item) => (
+                <div key={item.id} className="relative">
+                    <div className="projectCard block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <Carousel showArrows={false} showThumbs={false} autoPlay interval={3000} infiniteLoop>
                             {item.images && item.images.map((image, index) => (
-                                <div key={index}>
+                                <div key={index} onClick={() => handleImageClick(item.images)}>  {/* Add click handler */}
                                     <img src={image} alt={`Slide ${index + 1}`} />
                                 </div>
                             ))}
                         </Carousel>
-                          <div className='details' onClick={() => setSelectedId(item.id)}
-                        key={item.id}>  
+                        <div className='details' onClick={() => setSelectedId(item.id)} key={item.id}>
                             <h5 className="my-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 {item.title}
                             </h5>
                             <div className="flex flex-wrap justify-center gap-1">
                                 {item.technologies.map((tech, index) => (
-                                    <p
-                                        key={index}
-                                        className="bg-blue-500 text-white font-semibold px-3 py-1 rounded-full mr-2 mb-2 whitespace-nowrap"
-                                        style={{ width: "fit-content" }}
-                                    >
+                                    <p key={index} className="bg-blue-500 text-white font-semibold px-3 py-1 rounded-full mr-2 mb-2 whitespace-nowrap" style={{ width: "fit-content" }}>
                                         {tech}
                                     </p>
                                 ))}
                             </div>
-                            </div>
                         </div>
                     </div>
-                ))}
-            </div>
-           
-            {selectedId && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            {items &&
-              items.map((item) =>
-                item.id === selectedId ? (
-                  <div
-                    className="selectedCard bg-white rounded-lg p-4 shadow-md mx-auto"
-                    key={item.id}
-                    style={{ maxHeight: "86vh", width: "70%", overflow: "auto" }}
-                  >
-                    <div className="relative">
-                      <div>
-                        <h2 className="text-xl font-bold mb-2 text-blue-600">
-                          {item.title}
-                        </h2>
-                        <h5 className="text-sm font-bold mb-1 text-gray-700">
-                          Technologies Used:
-                        </h5>
-                        <ul className="text-black">
-                          {item.technologies &&
-                            item.technologies.join(" | ")}
-                        </ul>
-                        <h5 className="text-sm font-bold mb-1 text-gray-700">
-                          Description:
-                        </h5>
-                        <p className="text-md text-gray-700 mb-4">
-                          {item.description}
-                        </p>
-                        <h5 className="text-sm font-bold mb-1 text-gray-700">
-                          Responsibilities:
-                        </h5>
-                        <ul className="list-disc pl-5 text-md text-gray-700 mb-4">
-                          {item.responsibilities
-                            .split("\n")
-                            .filter((line) => line.trim() !== "")
-                            .map((line, index) => (
-                              <li key={index}>
-                                {line.trim().replace(/^-\s*/, "")}
-                              </li>
-                            ))}
-                        </ul>
-                        <h5 className="text-sm font-bold mb-1 text-gray-700">
-                          Achievements:
-                        </h5>
-                        <ul className="list-disc pl-5 text-md text-gray-700">
-                          {item.achievements
-                            .split("\n")
-                            .filter((line) => line.trim() !== "")
-                            .map((line, index) => (
-                              <li key={index}>
-                                {line.trim().replace(/^-\s*/, "")}
-                              </li>
-                            ))}
-                        </ul>
-                      </div>
-                      <div className="cardFooter flex items-center justify-center py-7">
-                        {item.gitLink && (
-                          <a href={item.gitLink} target="_blank" style={{ width: "50px" }}>
-                            <FaGithub style={{ color: "black", width: "30px", height: "30px" }} />
-                          </a>
-                        )}
-                        <button
-                          style={{ color: "black", fontSize: "30px" }}
-                          onClick={() => setSelectedId("")}
-                        >
-                          <FaTimesCircle />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ) : null
-              )}
-          </div>
-        )}
-      
+                </div>
+            ))}
         </div>
-    ); 
+
+        {/* Modal for image */}
+        {showImageModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div className="bg-white rounded-lg p-4 shadow-md" style={{ width: '800px', height: '500px' }}>
+                        <div className="relative h-full">
+                        <button onClick={closeImageModal} className="relative top-0 left-0 p-2 text-white bg-red-500 rounded-full">
+                                <FaTimesCircle />
+                            </button>
+                            <Carousel showArrows={true} showThumbs={false} autoPlay interval={3000} infiniteLoop>
+                                {selectedImages.map((image, index) => (
+                                    <div key={index}>
+                                        <img src={image} alt={`Slide ${index + 1}`} />
+                                    </div>
+                                ))}
+                            </Carousel>
+                           
+                        </div>
+                    </div>
+                </div>
+            )}
+
+        {/* Modal for project details */}
+        {selectedId && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                {items &&
+                    items.map((item) =>
+                        item.id === selectedId ? (
+                            <div className="selectedCard bg-white rounded-lg p-4 shadow-md mx-auto" key={item.id} style={{ maxHeight: "86vh", width: "70%", overflow: "auto" }}>
+                                <div className="relative">
+                                    <div>
+                                        <h2 className="text-xl font-bold mb-2 text-blue-600">{item.title}</h2>
+                                        <h5 className="text-sm font-bold mb-1 text-gray-700">Technologies Used:</h5>
+                                        <ul className="text-black">
+                                            {item.technologies && item.technologies.join(" | ")}
+                                        </ul>
+                                        <h5 className="text-sm font-bold mb-1 text-gray-700">Description:</h5>
+                                        <p className="text-md text-gray-700 mb-4">{item.description}</p>
+                                        <h5 className="text-sm font-bold mb-1 text-gray-700">Responsibilities:</h5>
+                                        <ul className="list-disc pl-5 text-md text-gray-700 mb-4">
+                                            {item.responsibilities.split("\n").filter((line) => line.trim() !== "").map((line, index) => (
+                                                <li key={index}>{line.trim().replace(/^-\s*/, "")}</li>
+                                            ))}
+                                        </ul>
+                                        <h5 className="text-sm font-bold mb-1 text-gray-700">Achievements:</h5>
+                                        <ul className="list-disc pl-5 text-md text-gray-700">
+                                            {item.achievements.split("\n").filter((line) => line.trim() !== "").map((line, index) => (
+                                                <li key={index}>{line.trim().replace(/^-\s*/, "")}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="cardFooter flex items-center justify-center py-7">
+                                        {item.gitLink && (
+                                            <a href={item.gitLink} target="_blank" rel="noreferrer" style={{ width: "50px" }}>
+                                                <FaGithub style={{ color: "black", width: "30px", height: "30px" }} />
+                                            </a>
+                                        )}
+                                        <button style={{ color: "black", fontSize: "30px" }} onClick={() => setSelectedId("")}>
+                                            <FaTimesCircle />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : null
+                    )}
+            </div>
+        )}
+    </div>
+);
 }
 
 export default Experience;

@@ -9,14 +9,14 @@ const AboutMe = () => {
   const timelineElements = [
     {
       id: 1,
-      title: "Junior Cloud Developer ",
-      location: "Bow Valley College, Canada",
-      date: "Sept 2023 - Apr 2024",
+      title: "Devops Engineer",
+      location: "Cognizant Technology Solutions, Canada",
+      date: "May 2024 - Nov 2024",
       icon: "work",
     },
     {
       id: 2,
-      title: "Post Graduate Diploma in Cloud Computing",
+      title: "Junior Devops Engineer Intern",
       location: "Bow Valley College, Canada",
       date: "Sept 2023 - Apr 2024",
       icon: "school",
@@ -30,7 +30,7 @@ const AboutMe = () => {
     },
     {
       id: 4,
-      title: "MEAN Stack Developer Intern",
+      title: "Full Stack Developer ",
       location: "Cognizant Technology Solutions, India",
       date: "Jan 2020 - May 2020",
       icon: "work",

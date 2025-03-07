@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import { Card, CardMedia } from "@mui/material";
-import pdf from "../Akilandeshwari_Srinivasan.pdf";
+import pdf from "../assets/Akilandeshwari_Srinivasan.pdf";
 import '../index.css';
 
 function Resume() {

@@ -9,12 +9,13 @@ import { SiTypescript, SiTerraform, SiKubernetes, SiMysql } from 'react-icons/si
 
 const Skills = () => {
     const icons = {
-        Angular: <IoLogoAngular/>,
+        
         AWS: <FaAws />  ,
         Docker: <FaDocker />, 
         Terraform: <SiTerraform/>,
         Kubernetes: <SiKubernetes/>,
         Python: <FaPython/>,
+        Angular: <IoLogoAngular/>,
         Html: <FaHtml5 />,
         Css : <FaCss3Alt />,
         TypeScript: <SiTypescript />,

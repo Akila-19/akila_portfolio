@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import Card from 'react-bootstrap/Card';
-import { Document, Page } from 'react-pdf';
-import { pdfjs } from 'react-pdf';
+import React, { useState } from "react";
 
 function Certifications() {
   const [showCertificate, setShowCertificate] = useState(false);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
-  // Set worker path from a reliable CDN inside the component
-  useEffect(() => {
-    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js`;
-  }, []);  // Empty dependency array ensures this runs once when the component mounts
-
-  // List of certificates
+  // List of certificates - Add your certifications here
   const certificates = [
-    { title: 'React Developer', subtitle: 'Certification', pdfUrl: './Terraform.pdf' },
+    {
+      title: "HashiCorp Certified: Terraform Associate",
+      subtitle: "Certification",
+      issuer: "HashiCorp",
+      date: "Febuary 2025",
+      description:
+        "Advanced certification for building modern React applications with hooks and context API.",
+      skills: ["React", "JavaScript", "State Management"],
+      pdfUrl: "../../public/Terraform.pdf",
+      icon: "📜",
+    },
   ];
 
-  const handleViewCertificate = (pdfUrl) => {
-    setSelectedCertificate(pdfUrl);
+  const handleViewCertificate = (certificate) => {
+    setSelectedCertificate(certificate);
     setShowCertificate(true);
   };
 
@@ -28,32 +30,71 @@ function Certifications() {
   };
 
   return (
-    <div>
+    <div className="certifications-page">
+      <h1 className="page-title">My Professional Certifications</h1>
+
       <div className="certificates-container">
         {certificates.map((certificate, index) => (
-          <Card key={index} style={{ width: '18rem' }}>
-            <Card.Body>
-              <Card.Title>{certificate.title}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">{certificate.subtitle}</Card.Subtitle>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              <Card.Link href="#" onClick={() => handleViewCertificate(certificate.pdfUrl)}>
-                View Certificate
-              </Card.Link>
-            </Card.Body>
-          </Card>
+          <div key={index} className="certificate-card">
+            <div className="card-header">
+              <span className="card-header-icon">{certificate.icon}</span>
+              <span>Certificate</span>
+            </div>
+            <div className="card-body">
+              <h3 className="card-title">{certificate.title}</h3>
+              <h4 className="card-subtitle">{certificate.subtitle}</h4>
+              <p className="card-text">{certificate.description}</p>
+
+              <div className="card-meta">
+                <div className="card-meta-item">
+                  <span className="card-meta-icon">🏢</span>
+                  <span>{certificate.issuer}</span>
+                </div>
+                <div className="card-meta-item">
+                  <span className="card-meta-icon">📅</span>
+                  <span>{certificate.date}</span>
+                </div>
+              </div>
+
+              <div className="card-actions">
+                <button
+                  className="view-button"
+                  onClick={() => handleViewCertificate(certificate)}
+                >
+                  <span>View Certificate</span>
+                  <span>📄</span>
+                </button>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
 
-      {/* Display PDF when 'showCertificate' state is true */}
       {showCertificate && (
-        <div className="pdf-container">
-          <button onClick={handleCloseCertificate}>Close</button>
-          <Document file={selectedCertificate}>
-            <Page pageNumber={1} />
-          </Document>
+        <div className="pdf-modal-backdrop" onClick={handleCloseCertificate}>
+          <div className="pdf-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="pdf-modal-header">
+              <h3 className="pdf-modal-title">
+                {selectedCertificate.title} Certificate
+              </h3>
+              <button
+                className="pdf-modal-close"
+                onClick={handleCloseCertificate}
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="pdf-modal-content">
+              {/* Using iframe for PDF display instead of react-pdf to avoid worker issues */}
+              <iframe
+                src={selectedCertificate.pdfUrl}
+                title={`${selectedCertificate.title} Certificate`}
+                className="pdf-iframe"
+              />
+              <h1>Hello Akils</h1>
+            </div>
+          </div>
         </div>
       )}
     </div>
