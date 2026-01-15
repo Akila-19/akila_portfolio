@@ -33,7 +33,14 @@ import CC7 from '../assets/CC7.png'
 import CC8 from '../assets/CC8.png'
 import CC9 from '../assets/CC9.png'
 import CC10 from '../assets/CC10.png'
-import VTR from '../assets/VTR.jpg'
+import task1 from '../assets/task1.png'
+import task2 from '../assets/task2.png'
+import task3 from '../assets/task3.png'
+import docker from '../assets/docker.png'
+import docker2 from '../assets/docker2.png'
+import micro1 from '../assets/micro1.png'
+import micro2 from '../assets/micro2.png'
+import micro3 from '../assets/micro3.png'
 
 
 
@@ -42,8 +49,93 @@ function Experience() {
   const [selectedImages, setSelectedImages] = useState([]);
   const [showImageModal, setShowImageModal] = useState(false);
     const items = [
+{
+    id: 1, 
+    mediumLink: `https://medium.com/@akila98sri/building-a-complete-ci-cd-pipeline-step-by-step-guide-f79f597ae137`, 
+    gitLink: `https://github.com/Akila-19/taskmanager`, // UPDATE THIS
+    images: [
+        task1,
+        task2,
+        task3,  
+    ],
+    title: "CI/CD Pipeline with Jenkins, Kubernetes, ArgoCD & Monitoring",
+    technologies: ["Jenkins", "Kubernetes", "ArgoCD", "Prometheus", "Grafana", "Docker", "GitOps", "kubectl", "Slack"],
+    description: "Built comprehensive CI/CD pipeline integrating Jenkins for continuous integration, Kubernetes for container orchestration, ArgoCD for GitOps-based deployment, and Prometheus/Grafana stack for complete observability and monitoring.",
+    responsibilities: `
+    - Designed and implemented Jenkins pipeline with multi-stage builds and automated testing - SonarQube integration, Trivy security scans
+    - Created Docker images and pushed to Docker Hub registry
+    - Configured Kubernetes clusters for development, staging, and production environments
+    - Deployed ArgoCD for GitOps workflow enabling declarative continuous deployment
+    - Set up Prometheus for metrics collection from applications and infrastructure
+    - Configured Grafana dashboards for real-time monitoring and alerting
+    - Integrated automated security scanning and quality gates in CI pipeline`,
+    achievements: `
+    - Reduced deployment time from hours to minutes with complete automation
+    - Achieved 99.9% deployment success rate through automated rollback mechanisms
+    - Improved application reliability with proactive monitoring and alerting
+    - Enhanced security posture with integrated vulnerability scanning and code quality checks
+    - Increased developer productivity by 50% through streamlined CI/CD processes
+    - Enabled self-service deployments for development teams through GitOps
+    - Published detailed CI/CD guide on Medium with architecture diagrams and implementation steps`
+},
+{
+    id: 2,
+    mediumLink: `https://medium.com/@akila98sri/docker-multi-stage-builds-a-practical-guide-to-image-optimization-acd6baa27bb7`, 
+    images: [
+       docker,
+       docker2
+    ],
+    title: "Docker Multi-Stage vs Single-Stage Build Optimization",
+    technologies: ["Docker", "Multi-Stage Builds", "Container Optimization", "Docker Compose", "Alpine Linux", "Image Security", "Best Practices"],
+    description: "Comprehensive analysis and implementation comparing single-stage and multi-stage Docker builds. Demonstrated significant image size reduction, improved security, and faster deployment times through multi-stage build optimization techniques.",
+    responsibilities: `
+    - Analyzed differences between single-stage and multi-stage Docker build processes
+    - Implemented single-stage Dockerfiles as baseline for comparison
+    - Designed optimized multi-stage Dockerfiles separating build and runtime dependencies
+    - Utilized Alpine Linux base images for minimal container footprint
+    - Implemented layer caching strategies for faster build times
+    - Applied security best practices including non-root users and minimal attack surface
+    - Benchmarked image sizes, build times, and runtime performance
+    - Created Docker Compose configurations for local development and testing`,
+    achievements: `
+    - Reduced Docker image sizes by 70% using multi-stage builds (from 1.2GB to 350MB)
+    - Decreased container startup time by 50% with optimized images
+    - Improved security posture by removing build tools from production images
+    - Reduced Docker registry storage costs by 65% across all applications
+    - Accelerated CI/CD pipeline by 40% with faster image builds and pulls
+    - Published comprehensive Docker optimization guide on Medium with performance comparisons`
+},
+{
+    id: 3,
+    mediumLink: `https://medium.com/@akila98sri/deploying-microservices-to-aws-eks-a-real-devops-journey-50648c67dc1e`,
+    gitLink: `https://github.com/Akila-19/microservices-eks-terraform`, // UPDATE THIS
+    images: [
+        micro1,
+        micro2,
+        micro3
+    ],
+    title: "Deploying Microservices to AWS EKS using Terraform",
+    technologies: ["Terraform", "AWS EKS", "Kubernetes", "Docker", "VPC", "IAM", "ALB", "Auto Scaling", "CloudWatch", "Microservices"],
+    description: "Automated deployment of microservices architecture to AWS EKS using Terraform infrastructure as code. Provisioned complete AWS infrastructure including VPC, EKS cluster, node groups, and deployed containerized microservices with load balancing and auto-scaling.",
+    responsibilities: `
+    - Designed Terraform modules for AWS EKS cluster provisioning
+    - Created VPC with public and private subnets across multiple availability zones
+    - Configured EKS cluster with managed node groups and auto-scaling policies
+    - Implemented IAM roles and policies for EKS cluster and service accounts
+    - Deployed microservices (user service, product service, API gateway) to EKS
+    - Configured Application Load Balancer for external traffic routing
+    - Set up CloudWatch logging and monitoring for cluster and applications
+    - Implemented Kubernetes deployments, services, and ingress configurations`,
+    achievements: `
+    - Successfully deployed production-ready microservices on AWS EKS
+    - Reduced infrastructure provisioning time from days to 30 minutes using Terraform
+    - Achieved 99.95% uptime with Multi-AZ EKS deployment
+    - Implemented auto-scaling handling 10x traffic spikes seamlessly
+    - Decreased infrastructure costs by 40% through right-sizing and spot instances
+    - Published complete EKS deployment guide on Medium with Terraform code examples`
+},
         {
-            id: 1,
+            id: 4,
             gitLink: `https://github.com/Akila-19/Cloud_Assignments.git`,
             images: [
                 CC1,CC2,CC3,CC4,CC5,CC6,CC7,CC8,CC9,CC10
@@ -68,7 +160,7 @@ function Experience() {
         },
 
         {
-            id: 2,
+            id: 5,
             images: [
                 ICS,
                 ICS1,ICS2,ICS3,ICS4,ICS5,ICS6,ICS7,ICS8
@@ -89,7 +181,7 @@ function Experience() {
             - Ensured data protection and regulatory adherence through implementation of security best practices.`,
         },
         {
-            id: 3,
+            id: 6,
             images: [
                 CLH,
                 CLH1,CLH10,
@@ -110,134 +202,18 @@ function Experience() {
             - Enhanced performance and user experience by implementing advanced caching mechanisms and CDN integration.
             - Ensured timely project delivery and alignment with client requirements through agile development methodologies.`,
         },
-        {
-            id: 4,
-            gitLink: ``,
-            images: [
-                VTR
-            ],
-            title: "WordPress to Mobile App Conversion & AWS Migration",
-            technologies: ["AWS Services", "WordPress", "Mobile App Development", "AppMySite", "Cloud Migration"],
-            description: "Led the migration of a WordPress website to a mobile app, leveraging AWS LightSail for cloud hosting. Collaborated with stakeholders to define requirements and deliver a user-centric solution. Executed AWS LightSail cloud migration, optimizing infrastructure for scalability and seamless integration with WordPress CMS.",
-            responsibilities: `
-            - Spearheaded end-to-end mobile app development initiative, achieving 25% increase in app downloads and 30% boost in user engagement metrics.
-            - Executed AWS LightSail cloud migration, resulting in 50% faster website loading times and 40% increase in site traffic.
-            - Collaborated with stakeholders to define requirements and ensure alignment with project goals.
-            - Implemented best practices for cloud migration, ensuring scalability and reliability.
-            - Facilitated seamless integration between mobile app and WordPress CMS.`,
-            achievements: `
-            - Successfully migrated WordPress website to mobile app, improving user engagement and app downloads.
-            - Optimized infrastructure on AWS LightSail, resulting in improved website performance and increased traffic.
-            - Collaborated effectively with stakeholders to achieve project objectives.`,
-
-        },
-        {
-            id: 5,
-            gitLink: ``,
-            images: [
-                DEV
-            ],
-            title: "Frontend Developer – Cognizant",
-            technologies: [
-                "Angular 12",
-                "React",
-                "NgRx",
-                "Redux",
-                "D3.js",
-                "Chart.js",
-                "JavaScript",
-                "TypeScript",
-                "HTML",
-                "CSS",
-                "jQuery",
-                "SASS",
-                "JSX",
-                "Node.js",
-                "Express.js",
-                "SQL",
-                "MySQL",
-                "PHP",
-                "Git"
-            ],
-            description: `
-            Led frontend development on projects, achieving pixel-perfect interfaces aligned with user experience goals. Specialized in creating Single Page Applications (SPAs) using Angular 12 and React, significantly enhancing page load times and user engagement. Engineered state management solutions with NgRx and Redux, optimizing application data flow and reducing API response times by 40%. Proficient in modern JavaScript/TypeScript patterns, D3.js, and Chart.js, improving data visualization efficiency by 30% and user engagement by 25%. Transformed design mockups into intuitive web interfaces with HTML, CSS, jQuery, SASS, JavaScript, and JSX.
-          `,
-            responsibilities: `
-            - Led frontend development, ensuring alignment with design wireframes and user experience goals.
-            - Crafted SPAs using Angular 12 and React, enhancing page load times and user engagement.
-            - Engineered state management solutions with NgRx and Redux, optimizing data flow and reducing API response times by 40%.
-            - Optimized application performance through code splitting, lazy loading, and efficient data binding techniques.
-            - Enhanced user experience and data presentation using D3.js and Chart.js, increasing data visualization efficiency by 30%.
-            - Fostered codebase consistency and maintainability with modern JavaScript/TypeScript patterns.
-            - Implemented HTML, CSS, jQuery, SASS, JavaScript, and JSX to create seamless user interfaces.
-            - Demonstrated proficiency in RESTful API integration with Angular HTTP client and Axios, improving data communication efficiency by 30%.
-            - Engineered scalable server-side applications with Node.js and Express.js, increasing API responsiveness and reliability by 40%.
-            - Utilized MySQL for database management, optimizing data storage and retrieval processes.
-            - Executed PHP development tasks, enhancing backend versatility.
-            - Conducted unit tests and code reviews to maintain code quality and reliability.
-            - Mastered Git for version control, ensuring collaborative development and codebase stability.
-          `,
-            achievements: `
-            - Achieved pixel-perfect interfaces and user experience alignment in frontend development projects.
-            - Enhanced page load times and user engagement through strategic SPA development.
-            - Reduced API response times by 40% with optimized state management solutions.
-            - Improved data visualization efficiency by 30% and user engagement by 25% using D3.js and Chart.js.
-            - Streamlined development processes and enhanced scalability with modern JavaScript/TypeScript patterns.
-            - Ensured seamless user experiences and increased usability through intuitive web interfaces.
-            - Increased API responsiveness and reliability by 40% with robust server-side applications.
-            - Optimized data storage and retrieval processes with proficient MySQL database management.
-            - Enhanced backend versatility with proficient PHP development tasks.
-            - Maintained code quality and reliability through rigorous unit tests and code reviews.
-            - Ensured collaborative development and codebase stability with Git version control mastery.
-          `
-        },
-        {
-            id: 6,
-            gitLink: ``,
-            images: [
-                DEV
-            ],
-            title: "E-commerce Website Development with MEAN Stack",
-            technologies: [
-                "MongoDB",
-                "Express.js",
-                "Angular",
-                "Node.js",
-                "RESTful API Development",
-                "Database Management",
-                "Frontend Development",
-                "GIT"
-            ],
-            description: `
-            Demonstrated hands-on experience in web development with a focus on the MEAN stack (MongoDB, Express.js, Angular, Node.js), resulting in a 30% improvement in website performance and scalability. Employed MongoDB for efficient database management, executing data modeling, indexing, and querying strategies to ensure optimal performance and scalability. Engineered robust RESTful APIs using Node.js and Express, enabling seamless communication between front-end and back-end components. Crafted interactive and responsive user interfaces with Angular, integrating features to elevate user experience and engagement.
-          `,
-            responsibilities: `
-            - Demonstrated hands-on experience in web development with a focus on the MEAN stack (MongoDB, Express.js, Angular, Node.js).
-            - Improved website performance and scalability by 30%.
-            - Employed MongoDB for efficient database management, executing data modeling, indexing, and querying strategies.
-            - Engineered robust RESTful APIs using Node.js and Express, ensuring seamless communication between front-end and back-end components.
-            - Crafted interactive and responsive user interfaces with Angular, integrating features to enhance user experience and engagement.
-          `,
-            achievements: `
-            - Achieved a 30% improvement in website performance and scalability.
-            - Ensured optimal database performance and scalability with MongoDB.
-            - Enabled seamless communication between front-end and back-end components through robust RESTful APIs.
-            - Enhanced user experience and engagement with interactive and responsive user interfaces.
-          `
-        }
+      
     ];
   
 
-  const handleImageClick = (images) => {
-    setSelectedImages(images); // Set clicked images array
-    setShowImageModal(true);  // Show the modal
-};
 
-const closeImageModal = () => {
-    setShowImageModal(false);  // Close the modal
-    setSelectedImages([]); // Clear the images
+const handleImageClick = (item) => {
+    if (item.mediumLink) {
+        window.open(item.mediumLink, '_blank');
+    } else if (item.gitLink) {
+        window.open(item.gitLink, '_blank');
+    }
 };
-
 return (
     <div className="container flex items-center justify-center p-4">
         <div className="flex flex-wrap justify-center gap-y-16 gap-x-12">
@@ -246,7 +222,7 @@ return (
                     <div className="projectCard block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <Carousel showArrows={false} showThumbs={false} autoPlay interval={3000} infiniteLoop>
                             {item.images && item.images.map((image, index) => (
-                                <div key={index} onClick={() => handleImageClick(item.images)}>  {/* Add click handler */}
+                                <div key={index} onClick={() => handleImageClick(item)} style={{ cursor: 'pointer' }}>
                                     <img src={image} alt={`Slide ${index + 1}`} />
                                 </div>
                             ))}
@@ -267,27 +243,6 @@ return (
                 </div>
             ))}
         </div>
-
-        {/* Modal for image */}
-        {showImageModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div className="bg-white rounded-lg p-4 shadow-md" style={{ width: '800px', height: '500px' }}>
-                        <div className="relative h-full">
-                        <button onClick={closeImageModal} className="relative top-0 left-0 p-2 text-white bg-red-500 rounded-full">
-                                <FaTimesCircle />
-                            </button>
-                            <Carousel showArrows={true} showThumbs={false} autoPlay interval={3000} infiniteLoop>
-                                {selectedImages.map((image, index) => (
-                                    <div key={index}>
-                                        <img src={image} alt={`Slide ${index + 1}`} />
-                                    </div>
-                                ))}
-                            </Carousel>
-                           
-                        </div>
-                    </div>
-                </div>
-            )}
 
         {/* Modal for project details */}
         {selectedId && (
@@ -318,7 +273,14 @@ return (
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="cardFooter flex items-center justify-center py-7">
+                                    <div className="cardFooter flex items-center justify-center py-7 gap-4">
+                                        {item.mediumLink && (
+                                            <a href={item.mediumLink} target="_blank" rel="noreferrer" style={{ width: "50px" }}>
+                                                <svg style={{ color: "black", width: "30px", height: "30px" }} viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                                                </svg>
+                                            </a>
+                                        )}
                                         {item.gitLink && (
                                             <a href={item.gitLink} target="_blank" rel="noreferrer" style={{ width: "50px" }}>
                                                 <FaGithub style={{ color: "black", width: "30px", height: "30px" }} />

@@ -1,33 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Row } from "react-bootstrap";
-import { Card, CardMedia } from "@mui/material";
-import pdf from "../Akilandeshwari_Srinivasan.pdf";
+import pdf from "../Akila_Vasan_DE.pdf";
 import '../index.css'; 
 
 function MyResume() {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <div>
       <Container fluid className="resume-section">
-      <Row className="justify-content-center resume">
-  <Card className="resume-card">
-    <CardMedia
-      className="cardmedia"
-      component="iframe"
-      src={pdf}
-    />
-  </Card>
-</Row>
-
+        <Row className="justify-content-center resume">
+          <iframe
+            src={pdf}
+            width="100%"
+            height="600px"
+            style={{ border: "none", borderRadius: "8px" }}
+            title="Resume"
+          />
+        </Row>
       </Container>
     </div>
   );

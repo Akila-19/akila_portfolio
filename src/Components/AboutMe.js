@@ -9,10 +9,10 @@ const AboutMe = () => {
   const timelineElements = [
     {
       id: 1,
-      title: "Devops Engineer",
-      location: "Cognizant Technology Solutions, Canada",
-      date: "May 2024 - Nov 2024",
-      icon: "work",
+      title: "Data Science Professional Certificate",
+      location: "SAIT, Canada",
+      date: "Sept 2024 - Apr 2025",
+      icon: "school",
     },
     {
       id: 2,
